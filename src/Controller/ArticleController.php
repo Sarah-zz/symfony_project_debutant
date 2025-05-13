@@ -16,11 +16,11 @@ class ArticleController extends AbstractController
         return $this->render('pages/article/list.html.twig', [
             'articles' => [
                 [
-                    'title' => 'Article 1',
+                    'title' => 'Article1',
                     'content' => 'Article 1 content',
                 ],
                 [
-                    'title' => 'Article 2',
+                    'title' => 'Article2',
                     'content' => 'Article 2 content',
                 ]
             ]

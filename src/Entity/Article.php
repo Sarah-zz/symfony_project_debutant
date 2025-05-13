@@ -20,6 +20,9 @@ class Article
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $content = null;
 
+    #[ORM\Column()]
+    private ?string $state = 'DRAFT';
+
     public function getId(): ?int
     {
         return $this->id;
@@ -45,6 +48,18 @@ class Article
     public function setContent(?string $content): static
     {
         $this->content = $content;
+
+        return $this;
+    }
+
+    public function getState(): ?string
+    {
+        return $this->state;
+    }
+
+    public function setState($state): static
+    {
+        $this->state = $state;
 
         return $this;
     }
